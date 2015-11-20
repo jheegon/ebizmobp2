@@ -1,0 +1,48 @@
+<div class="modal">
+    <ion-header-bar>
+        <h1 class="title">환경설정</h1>
+        <div class="buttons">
+            <button class="button button-balanced" ng-click="closeSettingModal()">Close</button>
+        </div>
+    </ion-header-bar>
+
+  <ion-content class="has-header padding">
+    <form name="myForm" novalidate ng-submit="setting(formData)">
+      <div class="list">
+        <label class="item item-input item-floating-label">
+          <span class="input-label">기준년도</span>
+          <input type="number" name="startYear" ng-model="formData.startYear" ng-minlength="4" ng-maxlength="4" ng-required="true" placeholder="검색시작년도를 입력하세요(예:1988)" required>
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">검색년도</span>
+          <input type="number" name="searchYear" ng-model="formData.searchYear" ng-minlength="4" ng-maxlength="4" ng-required="true" placeholder="검색대상 년도를 입력하세요(예:2015)" required>
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">검색월</span>
+          <input type="number" name="searchMonth" ng-model="formData.searchMonth" ng-minlength="1" ng-maxlength="2" ng-required="true" placeholder="검색대상 월을 입력하세요(예:09)" required>
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">검색일자</span>
+          <input type="number" name="searchDate" ng-model="formData.searchDate" ng-minlength="1" ng-maxlength="2" ng-required="true" placeholder="검색대상 일자를 입력하세요(예:09)" required>
+        </label>
+        <li class="item item-checkbox">
+          <label class="checkbox">
+            <input type="checkbox"name="agreed" ng-model="formData.agreed" required>
+          </label>
+          확인합니다
+        </li>
+      </div>
+      <button type="submit" class="button button-block button-positive" ng-disabled="myForm.$invalid">설정</button>
+      <div class="card">
+          Message: {{message}}
+          <div class="item item-text-wrap">
+              Valid: 
+              <span class="summary" ng-class="myForm.$valid ? 'ng-valid' : 'ng-invalid'">
+                  {{myForm.$valid}}
+              </span>
+          </div>
+      </div>
+    </form>
+  </ion-content>
+</div>
+

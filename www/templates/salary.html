@@ -1,0 +1,191 @@
+<ion-view title="급여 #{{month}}" >
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <a href="#/app/home" class="button button-icon icon ion-home icon-right"></a>
+    </ion-nav-buttons>
+
+    <ion-content class="has-header">
+    <ion-slide-box slide-tabs-scrollable="false"  show-pager="false" ion-slide-tabs>
+        <ion-slide ion-slide-tab-label="급상여 명세서">
+        <div class="row">
+            <div class="col">
+                <div class="item ebiz ebiz-label">총수령액
+                    <span class="ebiz-amount">{{salary.total_income | number:0}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="item ebiz ebiz-label">공제합계
+                    <span class="ebiz-amount">{{salary.total_deduct | number:0}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="item ebiz ebiz-label">실수령액
+                    <span class="ebiz-amount">{{salary.net_income | number:0}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="item ebiz">기본급
+                    <span class="ebiz-amount">{{salary.pay_base | number:0}}</span>
+                </div>
+                <div class="item ebiz">주특
+                    <span class="ebiz-amount">{{salary.allow_ot1_time | number:0}}</span>
+                </div>
+                <div class="item ebiz">야특
+                    <span class="ebiz-amount">{{salary.allow_ot2_time | number:0}}</span>
+                </div>
+                <div class="item ebiz">유급
+                    <span class="ebiz-amount">{{salary.allow_paid1_time | number:0}}</span>
+                </div>
+                <div class="item ebiz">야근
+                    <span class="ebiz-amount">{{salary.allow_night_time | number:0}}</span>
+                </div>
+                <div class="item ebiz">추가유급
+                    <span class="ebiz-amount">{{salary.allow_paid2_time | number:0}}</span>
+                </div>
+                <div class="item ebiz" >휴일근무
+                    <span class="ebiz-amount">{{salary.allow_week1_time | number:0}}</span>
+                </div>
+                <div class="item ebiz" >휴일연장
+                    <span class="ebiz-amount">{{salary.allow_week2_time | number:0}}</span>
+                </div>
+                <div class="item ebiz">전월발란스
+                    <span class="ebiz-amount">{{salary.last_balance_income | number:0}}</span>
+                </div>
+                <div class="item ebiz">사용자소득
+                    <span class="ebiz-amount">{{salary.user_defined_income | number:0}}</span>
+                </div>
+                <div class="item ebiz">직책수당
+                    <span class="ebiz-amount">0</span>
+                </div>
+                <div class="item ebiz">위험(주조)
+                    <span class="ebiz-amount">0</span>
+                </div>
+                <div class="item ebiz">위험(소트)
+                    <span class="ebiz-amount">0</span>
+                </div>
+                <div class="item ebiz">위험(공무)
+                    <span class="ebiz-amount">0</span>
+                </div>
+                <div class="item ebiz">상여금
+                    <span class="ebiz-amount">0</span>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="item ebiz">근로소득세
+                    <span class="ebiz-amount">{{salary.tax_income | number:0}}</span>
+                </div>
+                <div class="item ebiz">지방소득세
+                    <span class="ebiz-amount">{{salary.tax_residence | number:0}}</span>
+                </div>
+                <div class="item ebiz">국민연금
+                    <span class="ebiz-amount">{{salary.nation_pension | number:0}}</span>
+                </div>
+                <div class="item ebiz">건강보험
+                    <span class="ebiz-amount">{{salary.fee_medical_insurance | number:0}}</span>
+                </div>
+                <div class="item ebiz">고용보험
+                    <span class="ebiz-amount">{{salary.fee_hire_insurance | number:0}}</span>
+                </div>
+                <div class="item ebiz">식대
+                    <span class="ebiz-amount">{{salary.fee_meail | number:0}}</span>
+                </div>
+                <div class="item ebiz">동호회비
+                    <span class="ebiz-amount">{{salary.fee_informal_group | number:0}}</span>
+                </div>
+                <div class="item ebiz">상조회비
+                    <span class="ebiz-amount">{{salary.fee_mutual_aid | number:0}}</span>
+                </div>
+                <div class="item ebiz">조합비
+                    <span class="ebiz-amount">{{salary.fee_union | number:0}}</span>
+                </div>
+                <div class="item ebiz">기타공제
+                    <span class="ebiz-amount">0</span>
+                </div>
+                <div class="item ebiz">전월발란스
+                    <span class="ebiz-amount">0</span>
+                </div>
+                <div class="item ebiz">사용자공제
+                    <span class="ebiz-amount">{{salary.user_defined_deduct | number:0}}</span>
+                </div>
+                
+                <div class="item ebiz">년월차수당
+                    <span class="ebiz-amount">0</span>
+                </div>              
+                <div class="item ebiz">생산성향상
+                    <span class="ebiz-amount">0</span>
+                </div>              
+            </div>
+        </div>
+
+        
+        </ion-slide>
+        
+        
+        <!------------------------------- -->
+        <ion-slide ion-slide-tab-label="특별상여 명세서">
+        <div class="row">
+            <div class="col">
+                <div class="item ebiz" ng-repeat="my_bonus in bonus | orderBy:'my_bonus.bonus_amount'" >{{my_bonus.bonus_name}}
+                    <span class="ebiz-amount" >{{my_bonus.bonus_amount | number:0 }}</span>
+                </div>
+            </div>
+        </div>
+        </ion-slide>
+
+        <ion-slide ion-slide-tab-label="특별상여 명세서1">
+        <div class="row">
+            <div class="col">
+                </div>
+            </div>
+        </div>
+        </ion-slide>
+        <ion-slide ion-slide-tab-label="특별상여 명세서2">
+        <div class="row">
+            <div class="col">
+                </div>
+            </div>
+        </div>
+        </ion-slide>
+        <ion-slide ion-slide-tab-label="특별상여 명세서3">
+        <div class="row">
+            <div class="col">
+                </div>
+            </div>
+        </div>
+        </ion-slide>
+        <ion-slide ion-slide-tab-label="특별상여 명세서4">
+        <div class="row">
+            <div class="col">
+                </div>
+            </div>
+        </div>
+        </ion-slide>
+        <ion-slide ion-slide-tab-label="특별상여 명세서5">
+        <div class="row">
+            <div class="col">
+                </div>
+            </div>
+        </div>
+        </ion-slide>
+        <ion-slide ion-slide-tab-label="특별상여 명세서6">
+        <div class="row">
+            <div class="col">
+                </div>
+            </div>
+        </div>
+        </ion-slide>
+
+    </ion-slide-box>
+    </ion-content>
+    
+
+</ion-view>

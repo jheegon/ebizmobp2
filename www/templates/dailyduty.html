@@ -1,0 +1,119 @@
+<ion-view title="일근태 #{{dailyduty.workdt}}({{dailyduty.week}})">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <a href="#/app/home" class="button button-icon icon ion-home icon-right"></a>
+    </ion-nav-buttons>
+    <ion-content class="has-header">
+        <div class="row">
+            <div class="col">
+                <div class="item ebiz ebiz-title">일근태현황</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="item ebiz ebiz-title">근태현황</div>
+            </div>
+            <div class="col">
+                <div class="item ebiz ebiz-title">실근태시간</div>
+                <div class="item ebiz">합계
+                    <span class="ebiz-amount">{{dailyduty.total_time | number:0}}</span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="item ebiz ebiz-title">근태인정시간</div>
+                <div class="item ebiz">합계
+                    <span class="ebiz-amount">{{dailyduty.total2_time | number:0}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="item ebiz">근태
+                    <span class="ebiz-amount">{{dailyduty.worknm}}</span>
+                </div>
+                <div class="item ebiz">출근
+                    <span class="ebiz-amount">{{dailyduty.start_tm}}</span>
+                </div>
+                <div class="item ebiz">퇴근
+                    <span class="ebiz-amount">{{dailyduty.end_tm}}</span>
+                </div>
+                <div class="item ebiz">외출
+                    <span class="ebiz-amount">{{dailyduty.out_tm}}</span>
+                </div>
+                <div class="item ebiz">귀사
+                    <span class="ebiz-amount">{{dailyduty.in_tm}}</span>
+                </div>
+                <div class="item ebiz">시간
+                    <span class="ebiz-amount">{{dailyduty.iotm}}</span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="item ebiz">지각
+                    <span class="ebiz-amount">{{dailyduty.late_time | number:0}}</span>
+                </div>
+                <div class="item ebiz">외출
+                    <span class="ebiz-amount">{{dailyduty.out_time | number:0}}</span>
+                </div>
+                <div class="item ebiz">평근
+                    <span class="ebiz-amount">{{dailyduty.nor_time | number:0}}</span>
+                </div>
+                <div class="item ebiz">주특
+                    <span class="ebiz-amount">{{dailyduty.ot1_time | number:0}}</span>
+                </div>
+                <div class="item ebiz">야특
+                    <span class="ebiz-amount">{{dailyduty.ot2_time | number:0}}</span>
+                </div>
+                <div class="item ebiz">야근
+                    <span class="ebiz-amount">{{dailyduty.night_time | number:0}}</span>
+                </div>
+                <div class="item ebiz">휴일1
+                    <span class="ebiz-amount">{{dailyduty.week1_time | number:0}}</span>
+                </div>
+                <div class="item ebiz">휴일2
+                    <span class="ebiz-amount">{{dailyduty.week2_time | number:0}}</span>
+                </div>
+                <div class="item ebiz">유급
+                    <span class="ebiz-amount">{{dailyduty.paid1_time | number:0}}</span>
+                </div>
+                <div class="item ebiz">추유
+                    <span class="ebiz-amount">{{dailyduty.paid2_time | number:0}}</span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="item ebiz">&nbsp;
+                    <span class="ebiz-amount"></span>
+                </div>
+                <div class="item ebiz">&nbsp;
+                    <span class="ebiz-amount"></span>
+                </div>
+                <div class="item ebiz">평근
+                    <span class="ebiz-amount">{{dailyduty.nor_time_s | number:0}}</span>
+                </div>
+                <div class="item ebiz">주특
+                    <span class="ebiz-amount">{{dailyduty.ot1_time_s | number:0}}</span>
+                </div>
+                <div class="item ebiz">야특
+                    <span class="ebiz-amount">{{dailyduty.ot2_time_s | number:0}}</span>
+                </div>
+                <div class="item ebiz">야근
+                    <span class="ebiz-amount">{{dailyduty.night_time_s | number:0}}</span>
+                </div>
+                <div class="item ebiz">휴일1
+                    <span class="ebiz-amount">{{dailyduty.week1_time_s | number:0}}</span>
+                </div>
+                <div class="item ebiz">휴일2
+                    <span class="ebiz-amount">{{dailyduty.week2_time_s | number:0}}</span>
+                </div>
+                <div class="item ebiz">유급
+                    <span class="ebiz-amount">{{dailyduty.paid1_time_s | number:0}}</span>
+                </div>
+                <div class="item ebiz">추유
+                    <span class="ebiz-amount">{{dailyduty.paid2_time_s | number:0}}</span>
+                </div>
+
+            </div>
+       </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,63 @@
+<style>
+    form .ng-invalid.ng-dirty { background-color: white; }
+    form .ng-valid.ng-dirty { background-color: white; }
+    span.summary.ng-invalid { color: red; font-weight: bold; }
+    span.summary.ng-valid { color: green; }
+    form.input {font-size:2em;}
+</style>
+<ion-view view-title="Sign-In" name="login-view">
+
+  <div class="bar bar-header bar-positive">
+    <h3 class="title">Login</h3>
+  </div>
+
+  <ion-content class="padding">
+  <br><br><br>
+
+      <!-- <div class="list">
+        <label class="item item-input item-floating-label">
+          <span class="input-label">사용자아이디</span>
+          <input type="text" placeholder="사용자 ID를 입력하세요" ng-model="loginData.userid">
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">비밀번호</span>
+          <input type="password" placeholder="비밀번호를 입력하세요" ng-model="loginData.pwd" required>
+        </label>
+      </div>
+      <button class="button button-block button-positive" ng-click="login(loginData)">로그인</button> -->
+
+    <form name="myForm" novalidate ng-submit="login(loginData)">
+      <div class="list">
+        <label class="item item-input item-floating-label">
+          <span class="input-label">사용자아이디</span>
+          <input type="text" name="userid" style="font-size:1.2em" ng-model="loginData.userid" placeholder="사번을 입력하세요" required>
+        </label>
+        <!-- <label class="item item-input item-floating-label">
+          <span class="input-label">이메일주소</span>
+          <input type="email" name="email" ng-model="loginData.email" placeholder="이메일주소" required>
+        </label> -->
+        <label class="item item-input item-floating-label">
+          <span class="input-label">비밀번호</span>
+          <input type="password" name="pwd" style="font-size:1.2em" placeholder="비밀번호를 입력하세요" ng-model="loginData.pwd" required>
+        </label>
+        <!-- <li class="item item-checkbox">
+          <label class="checkbox">
+            <input type="checkbox"name="agreed" ng-model="loginData.agreed">
+          </label>
+          I agree to the terms and conditions
+        </li> -->
+      </div>
+      <button type="submit" style="font-size:1.2em" class="button button-block button-positive" ng-disabled="myForm.$invalid">로그인</button>
+      <div class="card">
+          Message: {{message}}
+          <div class="item item-text-wrap">
+              Valid: 
+              <span class="summary" ng-class="myForm.$valid ? 'ng-valid' : 'ng-invalid'">
+                  {{myForm.$valid}}
+              </span>
+          </div>
+      </div>
+    </form>
+
+  </ion-content>
+</ion-view>

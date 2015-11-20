@@ -1,0 +1,86 @@
+<!--ion-view title="Home">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-content has-header="true" padding="true">
+        <ion-list>
+            <ion-item class="item-avatar-left" ng-repeat="menu in menus" href="#/app{{menu.url}}">
+                <img ng-src="{{serverPath}}/img/{{menu.pic}}">
+                {{menu.title}}
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view-->
+
+<ion-view title="Home">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-content class="has-header" scroll="false">
+
+        <section class ="home-container">
+            <!--div class ="row header">
+                <div class="col text-center">
+                  [LOGO / HEADER]
+                </div>
+            </div-->
+            <div class="row icon-row">
+                <div class="col-10"></div>
+                <div class="col-80 text-center">
+                    <a href="#/app/salary/201509" class="button button-positive"><i class="icon ion-cash"></i></a><br/>
+                    급상여
+                </div>
+                <div class="col-10"></div>
+            </div>
+            <!-- <div class="row"><div class="col">&nbsp;</div></div> -->
+            <div class="row icon-row">
+                <div class="col-10"></div>
+                <div class="col-80 text-center">
+                    <a href="#/app/dailyduty/2015-06-01" class="button button-positive"><i class="icon ion-clock"></i></a><br/>
+                    일근태
+                </div>
+                <div class="col-10"></div>
+            </div>
+            <!-- <div class="row"><div class="col">&nbsp;</div></div> -->
+            <div class="row icon-row">
+                <div class="col-10"></div>
+                <div class="col-80 text-center">
+                    <a href="#/app/monthlyduty/201506" class="button button-positive"><i class="icon ion-calendar"></i></a><br/>
+                    월근태
+                </div>
+                <div class="col-10"></div>
+            </div>
+            <!-- <div class="row"><div class="col">&nbsp;</div></div> -->
+            <div class="row icon-row">
+                <div class="col-10"></div>
+                <div class="col-80 text-center">
+                    <a href="#/app/barcode" class="button button-positive"><i class="icon ion-grid"></i></a><br/>
+                    바코드
+                </div>
+                <div class="col-10"></div>
+            </div>
+            <!-- <div class="row"><div class="col">&nbsp;</div></div> -->
+            <div class="row icon-row">
+                <div class="col-10"></div>
+                <div class="col-80 text-center">
+                    <a href="#/app/nfc" class="button button-positive"><i class="icon ion-grid"></i></a><br/>
+                    NFC
+                </div>
+                <div class="col-10"></div>
+            </div>
+             
+            <!--div class="col text-center"><button class="button button-positive" ng-click="scanBarcode()"><i class="icon ion-grid"></i></button>
+                    <br/>
+                    BarCode
+                </div-->
+            <!--ion-list class="card">
+                <ion-item class="item-icon-left" ng-repeat="menu in menus" href="#/app{{menu.url}}">
+                    <i class="icon ion-{{menu.pic}}"></i>{{menu.title}}
+                </ion-item>
+            </ion-list-->
+        </section>
+
+        
+    </ion-content>
+
+</ion-view>

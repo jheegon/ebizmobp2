@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/slidingTabs.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/ionic/js/angular/angular-resource.min.js"></script>
+    <script src="lib/ionic/js/angular-mocks/angular-mocks.js"></script>
+
+    <script src="js/ng-barcode.min.js"></script>
+    <script src="js/ng-nfc.js"></script>
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+    <script src="lib/openfb.js"></script>
+    <script src="js/slidingTabsDirective.js"></script>
+    <!-- your app's js -->
+    <script src="js/config.js"></script>
+    <!--script src="js/push.js"></script-->
+    <script src="js/app.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/salary.js"></script>
+    <!--script src="js/bonus.js"></script-->
+    <script src="js/dailyduty.js"></script>
+    <script src="js/monthlyduty.js"></script>
+    <script src="js/barcode.js"></script>
+    <script src="js/nfc.js"></script>
+    <!--script src="js/sessions.js"></script>
+    <script src="js/speakers.js"></script>
+    <script src="js/profiles.js"></script-->
+
+    <script src="js/user_ctrl/auth_module.js"></script>
+    <!--script src="js/user_ctrl/user_ctrl.js"></script-->
+    <script src="js/user_ctrl/auth_service.js"></script>
+
+
+  </head>
+
+  <body ng-app="conference" ng-controller="AppCtrl">
+    <ion-nav-view></ion-nav-view>
+  </body>
+</html>

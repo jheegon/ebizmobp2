@@ -1,0 +1,86 @@
+.item-avatar > img:first-child, .item-avatar .item-image, .item-avatar .item-content > img:first-child, .item-avatar .item-content .item-image, .item-avatar-left > img:first-child, .item-avatar-left .item-image, .item-avatar-left .item-content > img:first-child, .item-avatar-left .item-content .item-image {
+    top: 10px;
+    left: 12px;
+}
+
+.item-avatar > img:first-child, .item-avatar .item-image, .item-avatar .item-content > img:first-child, .item-avatar .item-content .item-image, .item-avatar-left > img:first-child, .item-avatar-left .item-image, .item-avatar-left .item-content > img:first-child, .item-avatar-left .item-content .item-image {
+    max-width: 50px !important;
+    max-height: 50px !important;
+    border-radius: 25px !important;
+}
+
+.item-thumbnail > img:first-child, .item-thumbnail .item-image, .item-thumbnail .item-content > img:first-child, .item-avatar .item-content .item-image, .item-thumbnail-left > img:first-child, .item-thumbnail-left .item-image, .item-thumbnail-left .item-content > img:first-child, .item-thumbnail-left .item-content .item-image {
+    /*max-width: 50px !important;*/
+    /*max-height: 50px !important;*/
+    border-radius: 40px !important;
+}
+
+
+.menu-left .item {
+    background-color: transparent;
+    border: none;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color: #333;
+    color: #F0F1F1;
+}
+
+.menu-left .item-complex .item-content, .menu-left .item-radio .item-content {
+    background-color: transparent;
+}
+
+.item.ebiz {
+    border-color: #ddd;
+    background-color: #fff;
+    color: #444;
+    position: relative;
+    z-index: 2;
+    display: block;
+    margin: -1px;
+    padding: 7px;
+    border-width: 1px;
+    border-style: solid;
+    font-size: 16px;
+}
+.ebiz-amount {
+    float: right;
+    color: #444;
+    font-size: 16px;
+    font-weight: bold;
+}
+.ebiz-data {
+    float: right;
+    color: #444;
+    font-size: 16px;
+    font-weight: bold;
+}
+.ebiz-title {
+    color: #444;
+    text-align: center;
+    font-weight: bold;
+}
+.ebiz-label {
+    color: #444;
+    font-weight: bold;
+}
+
+
+.home-container {
+     display: -webkit-flex;
+     -webkit-flex-direction: column;
+     height: 100%;
+}
+.home-container > .row {
+     -webkit-flex: 1;
+}
+
+.header {
+     -webkit-flex: 1.5 !important;
+     -webkit-align-items: center;
+     background-color: #1abc9c;
+     height: 20%;
+}
+ 
+.icon-row {
+     -webkit-align-items: center;
+}
