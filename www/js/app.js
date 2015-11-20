@@ -18,33 +18,19 @@ angular.module('conference', ['ionic', 'ngMockE2E',            //'conference.hom
             }
         });
 
-
         // Disable BACK button on home
         $ionicPlatform.registerBackButtonAction(function(event) {
             if (true) { // your check here
                 $ionicPopup.confirm({
-                    title: 'System warning',
-                    template: 'are you sure you want to exit?'
+                    title: '종료확인',
+                    template: '프로그램을 종료하시겠습니까?'
                 }).then(function(res) {
                     if (res) {
                         ionic.Platform.exitApp();
                     }
                 })
-
-
-// Disable BACK button on home
-$ionicPlatform.registerBackButtonAction(function(event) {
-    if (true) { // your check here
-        $ionicPopup.confirm({
-            title: 'System warning',
-            template: 'are you sure you want to exit?'
-        }).then(function(res) {
-            if (res) {
-                ionic.Platform.exitApp();
             }
-        })
-    }
-  }, 100);
+          }, 100);
 
 
         $rootScope.loginUser    = {}; //userid, username, 현재 로그인한 사용자 정보

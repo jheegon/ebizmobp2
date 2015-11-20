@@ -24,11 +24,12 @@ node_modules 폴더가 생성될 것이다.
 	```
 
 
-2. 바코드, NFC 플러그인을 설치한다.
+2. 바코드, NFC, Splash 플러그인을 설치한다.
 
 	```
 	cordova plugin add https://github.com/wildabeast/BarcodeScanner.git
 	cordova plugin add https://github.com/chariotsolutions/phonegap-nfc
+	cordova plugin add org.apache.cordova.splashscreen
 	```
 
 plugins 폴더가 생성될 것이다.
